@@ -1,0 +1,5 @@
+//DAX expression to add a calculated average column to a table//
+
+
+= Table.AddColumn(#"Filled Down", "Average", each List.Average({[Google], [IMDB_normalised], [Letterboxd_normalised], 
+	[RT_Critic_score_normalised], [RT_Audience_score_normalised]}), Percentage.Type)
