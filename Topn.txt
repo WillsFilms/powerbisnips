@@ -1,0 +1,3 @@
+//DAX code to calculate the top x values//
+
+Top x products = SUMX(TOPN([number], Product, Product[Total Sales]), [Total Sales])
