@@ -1,0 +1,17 @@
+// DAX to calculate duplicate values in specific column//
+
+=
+IF (
+COUNTROWS (
+CALCULATETABLE (
+'Table',
+ALLSELECTED ('Table'),
+VALUES ('Table'[fieldname] )
+)
+) = 1,
+0,
+1
+)
+
+
+// Add this measure to a conditional formatting field rule to highlight any duplicate values in the column //
