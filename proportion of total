@@ -1,0 +1,3 @@
+## DAX code for calculating proportions of a category to the whole table ##
+
+=(SUM(tablename[valuefield])/CALCULATE(SUM(tablename[valuefield]), ALL(tablename[categoryfield])))
