@@ -1,0 +1,3 @@
+//DAX code to create a blank table to store measures in//
+
+_Measures = {Blank()}
