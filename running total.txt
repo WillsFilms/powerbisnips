@@ -1,0 +1,9 @@
+x running total =
+VAR MaxDate = MAX ( 'calendartable'[Date] ) -- Saves the last visible date in the calendar table
+
+RETURN
+	CALCULATE (
+		DISTINCTCOUNT('tablename'[value you want to count]) -- Computes the count of value (can also use SUM if numerical)
+		calendartable[DATE] <= MaxDate,  -- Where date is before the last visible date
+		ALL (calendartable) 		-- Removes any other filters from Date
+	)
